@@ -772,7 +772,7 @@ dependencies = [
 [[package]]
 name = "lenso-capability-email-dispatch"
 version = "0.1.0"
-source = "git+https://github.com/LioRael/lenso-notification-plugin?rev=551314a5832e69d68d657b01bfe1b26b922c6e7e#551314a5832e69d68d657b01bfe1b26b922c6e7e"
+source = "git+https://github.com/LioRael/lenso-notification-plugin?rev=b001dffea970789858499efa2049853d37bc3e0f#b001dffea970789858499efa2049853d37bc3e0f"
 dependencies = [
  "futures",
  "lenso-contract-codegen",

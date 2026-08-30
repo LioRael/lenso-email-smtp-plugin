@@ -13,7 +13,7 @@ chrono = { version = "0.4", features = ["serde"] }
 hex = "0.4"
 lettre = { version = "0.11.23", default-features = false, features = ["builder", "hostname", "pool", "smtp-transport", "tokio1-rustls", "ring", "webpki-roots"] }
 lenso = { version = "0.5.0", git = "https://github.com/LioRael/lenso-runtime-rust", rev = "b763a63adc20f1ccc9955e784c0d04c21489126b" }
-lenso-capability-email-dispatch = { version = "0.1.0", git = "https://github.com/LioRael/lenso-notification-plugin", rev = "551314a5832e69d68d657b01bfe1b26b922c6e7e" }
+lenso-capability-email-dispatch = { version = "0.1.0", git = "https://github.com/LioRael/lenso-notification-plugin", rev = "b001dffea970789858499efa2049853d37bc3e0f" }
 lenso-capability-secrets = { version = "0.1.1", git = "https://github.com/LioRael/lenso-secrets-plugin", rev = "c31aa142ff59b4536e2bf3e9785ccbb5bb5c0e6a" }
 lenso-kernel = { version = "0.2.0", git = "https://github.com/LioRael/lenso", rev = "cd35675a191d815b690c8889756dfe859a0e4d7b" }
 lenso-postgres-kit = { version = "0.1.0", git = "https://github.com/LioRael/lenso-postgres-kit", rev = "97ff73638d1fca098034c443539d44d95062eea4" }
@@ -38,4 +38,3 @@ missing_panics_doc = "allow"
 must_use_candidate = "allow"
 result_large_err = "allow"
 too_many_lines = "allow"
-
