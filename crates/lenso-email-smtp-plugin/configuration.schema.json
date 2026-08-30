@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "database_url_secret", "provider", "smtp_host", "smtp_port", "tls_mode", "username_secret_ref", "password_secret_ref", "from_address", "from_name", "message_id_domain", "command_timeout_ms", "effect_lease_ms", "max_message_bytes", "allowed_callers"],
+  "properties": {
+    "schema": { "type": "string", "pattern": "^[a-z][a-z0-9_]{0,62}$" },
+    "database_url_secret": { "type": "string", "minLength": 1, "maxLength": 256 },
+    "provider": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "smtp_host": { "type": "string", "minLength": 1, "maxLength": 253 },
+    "smtp_port": { "type": "integer", "minimum": 1, "maximum": 65535 },
+    "tls_mode": { "type": "string", "enum": ["implicit_tls", "starttls_required"] },
+    "username_secret_ref": { "type": "string", "minLength": 1, "maxLength": 256 },
+    "password_secret_ref": { "type": "string", "minLength": 1, "maxLength": 256 },
+    "from_address": { "type": "string", "minLength": 3, "maxLength": 320 },
+    "from_name": { "type": ["string", "null"], "maxLength": 160 },
+    "message_id_domain": { "type": "string", "minLength": 1, "maxLength": 253 },
+    "command_timeout_ms": { "type": "integer", "minimum": 1000, "maximum": 120000 },
+    "effect_lease_ms": { "type": "integer", "minimum": 2000, "maximum": 300000 },
+    "max_message_bytes": { "type": "integer", "minimum": 1024, "maximum": 1048576 },
+    "allowed_callers": { "type": "array", "minItems": 1, "maxItems": 64, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 200 } }
+  }
+}
+
