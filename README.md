@@ -80,12 +80,11 @@ V1 sends one recipient with text/HTML alternative bodies. It does not declare at
 ## Verification
 
 ```bash
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo fmt --all -- --check
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo check --locked --workspace --all-targets
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo test --locked --workspace
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo clippy --locked --workspace --all-targets -- -D warnings
+cargo fmt --all -- --check
+cargo check --locked --workspace --all-targets
+cargo test --locked --workspace
+cargo clippy --locked --workspace --all-targets -- -D warnings
 ./scripts/check-repository-boundary.sh
 ```
 
 The PostgreSQL acceptance test additionally uses `LENSO_EMAIL_SMTP_TEST_DATABASE_URL`; the dedicated database name must start with `lenso_email_smtp_test`.
-
